@@ -38,9 +38,18 @@ public class LinkedList {
         newNode.next = right;
         left.next = newNode;
     }
-    public void firstPop(){
-        int data=head.data;
-        head=head.next;
+
+    public void firstPop() {
+        int data = head.data;
+        head = head.next;
+    }
+
+    public void lastPop() {
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
     }
 
     public void print() {
