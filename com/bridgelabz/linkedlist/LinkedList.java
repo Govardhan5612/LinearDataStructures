@@ -38,6 +38,10 @@ public class LinkedList {
         newNode.next = right;
         left.next = newNode;
     }
+    public void firstPop(){
+        int data=head.data;
+        head=head.next;
+    }
 
     public void print() {
         /**
