@@ -12,15 +12,17 @@ public class LinkedListMain {
          * create linked list functions
          */
         LinkedList list = new LinkedList();
+
         /**
-         * add data at last
+         * add data at first
          */
-        list.add(70);
-        list.add(30);
-        list.add(56);
+        list.append(56);
+        list.append(30);
+        list.append(70);
         /**
          * Printing the data
          */
+        System.out.println("Print link list in append method");
         list.print();
     }
 }

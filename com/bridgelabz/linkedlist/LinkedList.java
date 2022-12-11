@@ -15,6 +15,22 @@ public class LinkedList {
         head = newNode;
     }
 
+    public void append(int data) {
+        /**
+         * create link list append method
+         */
+        Node newNode = new Node(data);
+        Node temp = head;
+        if (head == null) {
+            head = newNode;
+        } else {
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+    }
+
     public void print() {
         /**
          * print the linked list
@@ -27,6 +43,7 @@ public class LinkedList {
                 System.out.print(temp.data + " ,");
                 temp = temp.next;
             }
+            System.out.println();
         }
     }
 }
