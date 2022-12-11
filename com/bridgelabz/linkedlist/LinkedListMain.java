@@ -19,11 +19,11 @@ public class LinkedListMain {
         list.append(56);
         list.append(30);
         list.append(70);
-        list.firstPop();
+        list.lastPop();
         /**
          * Printing the data
          */
-        System.out.println("Print link list in delete first method");
+        System.out.println("Print linked list in delete last method");
         list.print();
     }
 }
