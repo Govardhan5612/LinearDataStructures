@@ -14,15 +14,15 @@ public class LinkedListMain {
         LinkedList list = new LinkedList();
 
         /**
-         * add data at first
+         * insert data in between
          */
         list.append(56);
-        list.append(30);
         list.append(70);
+        list.insert(30);
         /**
          * Printing the data
          */
-        System.out.println("Print link list in append method");
+        System.out.println("Print link list in insert method");
         list.print();
     }
 }

@@ -31,6 +31,14 @@ public class LinkedList {
         }
     }
 
+    public void insert(int data) {
+        Node newNode = new Node(data);
+        Node left = head;
+        Node right = left.next;
+        newNode.next = right;
+        left.next = newNode;
+    }
+
     public void print() {
         /**
          * print the linked list
