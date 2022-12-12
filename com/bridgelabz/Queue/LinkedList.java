@@ -27,4 +27,14 @@ public class LinkedList {
         size++;
         System.out.print(data+" ,");
     }
+    public int dequeue(){
+        int data = first.data;
+        first=first.next;
+        if (size==0){
+            last=null;
+        }
+        size--;
+        System.out.println(data+" is removed");
+        return data;
+    }
 }
