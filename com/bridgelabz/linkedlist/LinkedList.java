@@ -1,5 +1,10 @@
 package com.bridgelabz.linkedlist;
 
+import java.util.Arrays;
+
+/**
+ * @author Govardhan Reddy
+ */
 public class LinkedList {
     /**
      * Create a linked list functions
@@ -32,6 +37,9 @@ public class LinkedList {
     }
 
     public void insert(int data) {
+        /**
+         * Insert node in between nodes
+         */
         Node newNode = new Node(data);
         Node left = head;
         Node right = left.next;
@@ -40,11 +48,17 @@ public class LinkedList {
     }
 
     public void firstPop() {
+        /**
+         * Delete first node of the list
+         */
         int data = head.data;
         head = head.next;
     }
 
     public void lastPop() {
+        /**
+         * Delete last node if the list
+         */
         Node temp = head;
         while (temp.next.next != null) {
             temp = temp.next;
@@ -53,6 +67,9 @@ public class LinkedList {
     }
 
     public Node search(int searchData) {
+        /**
+         * Searching the node in the list
+         */
         Node temp = head;
         while (temp != null) {
             if (temp.data == searchData) {
@@ -76,6 +93,9 @@ public class LinkedList {
     }
 
     public void popInBetween(int data) {
+        /**
+         * Delete node in between list
+         */
         int index = 0;
         Node left = head;
         Node right = left.next;
@@ -86,6 +106,7 @@ public class LinkedList {
         }
         left.next = right.next;
     }
+
     public void print() {
         /**
          * print the linked list
@@ -99,6 +120,16 @@ public class LinkedList {
                 temp = temp.next;
             }
             System.out.println();
+        }
+    }
+
+    public void sort(int [] sort) {
+        /**
+         * sorting the list use sort method
+         */
+        Arrays.sort(sort);
+        for (int i = 0; i < sort.length; i++) {
+            System.out.print(sort[i] + " ,");
         }
     }
 }

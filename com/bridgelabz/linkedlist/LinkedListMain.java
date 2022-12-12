@@ -26,5 +26,7 @@ public class LinkedListMain {
          */
         System.out.println("Print insert in between linked list");
         list.print();
+        int [] array={56,30,40,70};
+        list.sort(array);
     }
 }
