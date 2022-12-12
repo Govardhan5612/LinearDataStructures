@@ -18,8 +18,9 @@ public class LinkedListMain {
          */
         list.append(56);
         list.append(30);
+        list.append(40);
         list.append(70);
-        list.insertNodeBetween(40);
+        list.popInBetween(40);
         /**
          * Printing the data
          */

@@ -52,22 +52,6 @@ public class LinkedList {
         temp.next = null;
     }
 
-    public void print() {
-        /**
-         * print the linked list
-         */
-        if (head == null) {
-            System.out.println("Linked list is empty");
-        } else {
-            Node temp = head;
-            while (temp != null) {
-                System.out.print(temp.data + " ,");
-                temp = temp.next;
-            }
-            System.out.println();
-        }
-    }
-
     public Node search(int searchData) {
         Node temp = head;
         while (temp != null) {
@@ -89,5 +73,32 @@ public class LinkedList {
         Node right = left.next;
         newNode.next = right;
         left.next = newNode;
+    }
+
+    public void popInBetween(int data) {
+        int index = 0;
+        Node left = head;
+        Node right = left.next;
+        while (right.data != data) {
+            left = left.next;
+            right = right.next;
+            index++;
+        }
+        left.next = right.next;
+    }
+    public void print() {
+        /**
+         * print the linked list
+         */
+        if (head == null) {
+            System.out.println("Linked list is empty");
+        } else {
+            Node temp = head;
+            while (temp != null) {
+                System.out.print(temp.data + " ,");
+                temp = temp.next;
+            }
+            System.out.println();
+        }
     }
 }
