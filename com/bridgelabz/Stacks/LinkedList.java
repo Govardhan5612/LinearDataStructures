@@ -19,6 +19,17 @@ public class LinkedList {
         top = newNode;
     }
 
+    public int peak() {
+        if (top != null) {
+            return top.data;
+        } else {
+            return -1;
+        }
+    }
+    public void pop(){
+       top=top.next;
+    }
+
     public void print() {
         Node temp = top;
         if (top == null) {
