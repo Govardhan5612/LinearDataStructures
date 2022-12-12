@@ -6,6 +6,8 @@ public class Stacks {
         list.push(56);
         list.push(30);
         list.push(70);
+        list.pop();
+        System.out.println("peak element of the list "+list.peak());
         list.print();
     }
 }
