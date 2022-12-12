@@ -67,19 +67,27 @@ public class LinkedList {
             System.out.println();
         }
     }
-    public Node search(int searchData){
+
+    public Node search(int searchData) {
         Node temp = head;
-        while (temp!=null){
-            if (temp.data==searchData){
-                System.out.println(searchData+" is found in list");
+        while (temp != null) {
+            if (temp.data == searchData) {
+                System.out.println(searchData + " is found in list");
                 break;
             }
-            temp=temp.next;
-
+            temp = temp.next;
         }
-        if (temp==null){
-            System.out.println(searchData+" is not found");
+        if (temp == null) {
+            System.out.println(searchData + " is not found");
         }
         return null;
+    }
+
+    public void insertNodeBetween(int data) {
+        Node newNode = new Node(data);
+        Node left = head.next;
+        Node right = left.next;
+        newNode.next = right;
+        left.next = newNode;
     }
 }

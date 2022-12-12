@@ -19,11 +19,11 @@ public class LinkedListMain {
         list.append(56);
         list.append(30);
         list.append(70);
-        list.search(70);
+        list.insertNodeBetween(40);
         /**
          * Printing the data
          */
-        System.out.println("Print linked list");
+        System.out.println("Print insert in between linked list");
         list.print();
     }
 }
